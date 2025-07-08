@@ -278,8 +278,19 @@ Eksempel 3: (["En", "To", "Tre"], "Fire") --> ["En", "To", "Tre", "Fire"]
 Eksempel 4: (["En", "To", "Tre"], "To") --> ["En", "Tre"]
 
 ******************************************************************************/
+["Rød", "Grønn"], "Blå";
+/* ["Rød", "Grønn", "Blå"], "Grønn"; */
 
-// Skriv koden for oppgave 7 her
+function uppdatedArray(array, string) {
+  if (array.includes(string)) {
+    const index = array.indexOf(string);
+    array.splice(index, 1);
+  } else {
+    array.push(string);
+  }
+  return array;
+}
+console.log(uppdatedArray(["Rød", "Grønn"], "Blå"));
 
 /******************************************************************************
 8.
